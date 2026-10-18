@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stockéa — Gestion d'inventaire, ventes et équipe pour PME québécoises</title>
-  <meta name="description" content="Stockéa réunit inventaire, ventes, factures TPS/TVQ, fidélité, courriels, horaires d'équipe et assistant IA dans une seule application en français, conforme à la Loi 25. Plan gratuit offert.">
+  <meta name="description" content="Stockéa réunit inventaire, ventes, factures TPS/TVQ, fidélité, courriels, horaires d'équipe et assistant IA dans une seule application en français, conforme à la Loi 25. Essai gratuit de 14 jours.">
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="v32dhjvrttlenjb4Bcq7vn-cIHvCRZK645zwQYOZ7cE">
   <meta name="theme-color" content="#050507">
@@ -157,7 +157,10 @@ p { margin: 0; }
 .secu .carte p { font-size: 14.5px; }
 
 /* Tarifs */
-.tarifs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+.tarifs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; max-width: 980px; margin: 0 auto; }
+.essai-bandeau { max-width: 980px; margin: 0 auto 34px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; padding: 20px 24px; border-radius: 18px; border: 1px solid rgba(212, 169, 76, .4); background: rgba(212, 169, 76, .07); }
+.essai-bandeau strong { font-family: var(--serif); font-size: 24px; color: var(--or-clair); font-weight: 600; }
+.essai-bandeau span { flex: 1; min-width: 220px; color: var(--gris); font-size: 15.5px; }
 .plan { position: relative; border: 1px solid var(--trait); border-radius: 20px; padding: 30px 24px; display: flex; flex-direction: column; background: var(--noir); }
 .plan-vedette { border-color: transparent; background: linear-gradient(var(--noir), var(--noir)) padding-box, var(--degrade-or) border-box; border: 1px solid transparent; box-shadow: 0 24px 70px rgba(212, 169, 76, .12); }
 .plan-ruban { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 5px 14px; border-radius: 999px; background: var(--degrade-or); color: #17120a; font-size: 12px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
@@ -165,7 +168,7 @@ p { margin: 0; }
 .plan-prix { font-family: var(--serif); font-size: 48px; font-weight: 600; line-height: 1; }
 .plan-prix small { font-family: var(--sans); font-size: 15px; color: var(--gris); font-weight: 400; margin-left: 4px; }
 .plan-desc { color: var(--gris); font-size: 14.5px; margin: 12px 0 22px; min-height: 46px; }
-.plan ul { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 10px; font-size: 14.5px; flex: 1; }
+.plan ul { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 10px; align-content: start; font-size: 14.5px; flex: 1; }
 .plan li { padding-left: 24px; position: relative; color: #d9d6cf; }
 .plan li::before { content: "✦"; position: absolute; left: 0; color: var(--or); font-size: 11px; top: 3px; }
 .plan .btn { width: 100%; }
@@ -212,7 +215,7 @@ p { margin: 0; }
 /* ── Adaptatif ── */
 @media (max-width: 1020px) {
   .grille, .problemes { grid-template-columns: repeat(2, 1fr); }
-  .tarifs, .secu { grid-template-columns: repeat(2, 1fr); }
+  .secu { grid-template-columns: repeat(2, 1fr); }
   .tarifs { gap: 26px 16px; }
   .duo { grid-template-columns: 1fr; gap: 40px; }
   .nav-liens { display: none; }
@@ -243,7 +246,6 @@ p { margin: 0; }
     "inLanguage": "fr-CA",
     "description": "Gestion d'inventaire, de ventes, de factures et d'équipe pour les PME québécoises.",
     "offers": [
-      {"@type": "Offer", "name": "Gratuit", "price": "0", "priceCurrency": "CAD"},
       {"@type": "Offer", "name": "Starter", "price": "29", "priceCurrency": "CAD"},
       {"@type": "Offer", "name": "Pro", "price": "59", "priceCurrency": "CAD"},
       {"@type": "Offer", "name": "Entreprise", "price": "99", "priceCurrency": "CAD"}
@@ -285,10 +287,10 @@ p { margin: 0; }
       <h1>Votre commerce, <span class="or italique">en ordre</span>.<br>Enfin.</h1>
       <p class="heros-texte">Inventaire, ventes, factures TPS/TVQ, fidélité, courriels et horaires d'équipe&nbsp;: tout ce qu'il faut pour gérer une PME québécoise, dans une seule application simple, en français.</p>
       <div class="heros-actions">
-        <a class="btn btn-or btn-grand" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Commencer gratuitement</a>
+        <a class="btn btn-or btn-grand" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Commencer l'essai gratuit</a>
         <a class="btn btn-ligne btn-grand" href="#fonctionnalites">Voir ce qu'elle fait</a>
       </div>
-      <p class="heros-note">Aucune carte de crédit requise · Sans engagement · Prête en 5 minutes</p>
+      <p class="heros-note">Essai gratuit de 14 jours · Toutes les fonctionnalités · Aucune carte de crédit</p>
 
       <div class="apercu revele" aria-hidden="true">
         <div class="apercu-barre"><span></span><span></span><span></span></div>
@@ -340,7 +342,7 @@ p { margin: 0; }
         <li class="revele">Vos ventes Square ou Shopify ne correspondent jamais à votre stock réel.</li>
         <li class="revele">Les horaires de l'équipe se font par texto, sur papier ou dans un autre outil.</li>
       </ul>
-      <p class="problemes-solution revele">Stockéa règle exactement ces problèmes, à partir de 0&nbsp;$ par mois.</p>
+      <p class="problemes-solution revele">Stockéa règle exactement ces problèmes. Essayez-le 14 jours, gratuitement.</p>
     </div>
   </section>
 
@@ -476,28 +478,19 @@ p { margin: 0; }
       <div class="entete revele">
         <span class="surtitre">Tarifs</span>
         <h2>Simple, <span class="or italique">sans surprise</span></h2>
-        <p>Commencez gratuitement. Passez à un plan supérieur quand votre commerce grandit.</p>
+        <p>Essayez tout gratuitement pendant 14 jours, sans carte de crédit. Ensuite, choisissez le plan qui vous convient.</p>
+      </div>
+      <div class="essai-bandeau revele">
+        <strong>14 jours gratuits</strong>
+        <span>Toutes les fonctionnalités du plan Pro, sans carte de crédit. Rien n'est facturé si vous ne choisissez pas de plan.</span>
+        <a class="btn btn-or" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Commencer l'essai</a>
       </div>
       <div class="tarifs">
-        <article class="plan revele">
-          <h3>Gratuit</h3>
-          <p class="plan-prix">0&nbsp;$<small>/mois</small></p>
-          <p class="plan-desc">Pour essayer Stockéa sans rien risquer.</p>
-          <ul>
-            <li>50 produits</li>
-            <li>2 utilisateurs</li>
-            <li>10 factures par mois</li>
-            <li>Inventaire, ventes, factures TPS/TVQ</li>
-            <li>Importation depuis Square, Excel…</li>
-          </ul>
-          <a class="btn btn-ligne" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Commencer</a>
-        </article>
         <article class="plan revele">
           <h3>Starter</h3>
           <p class="plan-prix">29&nbsp;$<small>/mois</small></p>
           <p class="plan-desc">Pour la petite boutique ou le salon.</p>
           <ul>
-            <li>Tout le plan Gratuit</li>
             <li>500 produits</li>
             <li>5 utilisateurs</li>
             <li>100 factures par mois</li>
@@ -568,6 +561,10 @@ p { margin: 0; }
           <p>Les échanges sont chiffrés, les mots de passe sont hachés avec Argon2, la vérification en deux étapes est offerte et les données de chaque entreprise sont cloisonnées. Nous ne vendons jamais vos données. Détails dans notre <a href="https://emmerick1.pythonanywhere.com/confidentialite/">politique de confidentialité</a>.</p>
         </details>
         <details>
+          <summary>Que se passe-t-il après les 14 jours d'essai&nbsp;?</summary>
+          <p>Vous choisissez un plan et payez en ligne, de façon sécurisée, par Stripe. Si vous ne choisissez rien, rien n'est facturé : l'application se met simplement en pause et vos données restent conservées et téléchargeables.</p>
+        </details>
+        <details>
           <summary>Puis-je annuler ou changer de plan&nbsp;?</summary>
           <p>En tout temps, sans frais ni contrat. Vous pouvez monter ou descendre de plan depuis les paramètres de votre compte.</p>
         </details>
@@ -579,8 +576,8 @@ p { margin: 0; }
   <section class="final">
     <div class="conteneur revele">
       <h2>Prêt à mettre de l'ordre<br>dans <span class="or italique">votre abondance</span>&nbsp;?</h2>
-      <p>Créez votre compte en quelques minutes. C'est gratuit et sans carte de crédit.</p>
-      <a class="btn btn-or btn-grand" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Créer mon compte gratuit</a>
+      <p>Créez votre compte en quelques minutes. 14 jours gratuits, toutes les fonctionnalités, sans carte de crédit.</p>
+      <a class="btn btn-or btn-grand" href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Commencer mon essai gratuit</a>
     </div>
   </section>
 </main>
@@ -604,7 +601,7 @@ p { margin: 0; }
         <div>
           <h4>Compte</h4>
           <ul>
-            <li><a href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Créer un compte</a></li>
+            <li><a href="https://emmerick1.pythonanywhere.com/inscription/?plan=gratuit">Essai gratuit</a></li>
             <li><a href="https://emmerick1.pythonanywhere.com/login/">Se connecter</a></li>
           </ul>
         </div>
